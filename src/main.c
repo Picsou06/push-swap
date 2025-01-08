@@ -6,7 +6,7 @@
 /*   By: evdalmas <evdalmas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 18:12:40 by evdalmas          #+#    #+#             */
-/*   Updated: 2025/01/08 18:49:59 by evdalmas         ###   ########.fr       */
+/*   Updated: 2025/01/08 18:58:27 by evdalmas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,15 @@ int main(int ac, char **av)
 
     if (ac < 2)
     {
-        printf("Usage: %s <numbers>\n", av[0]);
+        ft_printf("Usage: %s <numbers>\n", av[0]);
+        ft_printf("Example: %s 4 67 3 87\n", av[0]);
         return (1);
     }
 
     list = ft_parse(ac, av);
     if (!list)
     {
-        printf("Error: Invalid input\n");
+        ft_printf("Error: Invalid input\n");
         return (1);
     }
 
