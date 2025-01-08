@@ -4,7 +4,7 @@ CFLAGS = -Wall -Werror -Wextra -I include
 
 SRC =\
 		./src/parsing/ft_parse.c \
-		main.c \
+		./src/main.c \
 		./src/debug/show.c \
 
 OBJ = $(SRC:.c=.o)

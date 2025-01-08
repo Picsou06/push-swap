@@ -1,2 +1,7 @@
 .vscode/settings.json
 bad/
+push_swap
+libft/obj
+libft/libft.a
+*.o
+src/main.o

@@ -6,11 +6,11 @@
 /*   By: evdalmas <evdalmas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 18:12:40 by evdalmas          #+#    #+#             */
-/*   Updated: 2025/01/08 18:42:17 by evdalmas         ###   ########.fr       */
+/*   Updated: 2025/01/08 18:49:59 by evdalmas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/push_swap.h"
+#include "../includes/push_swap.h"
 
 int main(int ac, char **av)
 {
