@@ -1,39 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putptr.c                                        :+:      :+:    :+:   */
+/*   show.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: evdalmas <evdalmas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/16 14:49:16 by evdalmas          #+#    #+#             */
-/*   Updated: 2025/01/08 18:49:08 by evdalmas         ###   ########.fr       */
+/*   Created: 2025/01/08 18:01:41 by evdalmas          #+#    #+#             */
+/*   Updated: 2025/01/08 18:47:20 by evdalmas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "../../includes/push_swap.h"
 
-int	ft_ptr_len(uintptr_t num)
+void	show_list(t_list *list)
 {
-	int	len;
+    t_element *elem;
 
-	if (num == 0)
-		return (3);
-	len = 0;
-	while (num != 0)
-	{
-		len++;
-		num = num / 16;
-	}
-	return (len);
-}
-
-void	ft_putptr(void *ptr)
-{
-	if ((unsigned long)ptr == 0)
-	{
-		ft_putstr_fd("(nil)", 1);
-		return ;
-	}
-	ft_putstr_fd("0x", 1);
-	ft_puthex((unsigned long)ptr);
+    elem = list->first;
+    while (elem)
+    {
+        printf("%d\n", elem->nbr);
+        elem = elem->next;
+    }
 }

@@ -6,11 +6,10 @@
 /*   By: evdalmas <evdalmas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 14:54:40 by evdalmas          #+#    #+#             */
-/*   Updated: 2025/01/08 17:02:58 by evdalmas         ###   ########.fr       */
+/*   Updated: 2025/01/08 18:49:00 by evdalmas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/ft_printf.h"
 #include "../../includes/libft.h"
 
 int	ft_nb_len(int nb)

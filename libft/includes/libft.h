@@ -6,7 +6,7 @@
 /*   By: evdalmas <evdalmas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 16:54:31 by evdalmas          #+#    #+#             */
-/*   Updated: 2025/01/08 17:39:40 by evdalmas         ###   ########.fr       */
+/*   Updated: 2025/01/08 18:48:45 by evdalmas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdint.h>
+# include "ft_printf.h"
 
 int		ft_atoi(const char *str);
 int		ft_isdigit(int c);

@@ -6,11 +6,10 @@
 /*   By: evdalmas <evdalmas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 14:51:58 by evdalmas          #+#    #+#             */
-/*   Updated: 2025/01/08 17:02:59 by evdalmas         ###   ########.fr       */
+/*   Updated: 2025/01/08 18:49:04 by evdalmas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/ft_printf.h"
 #include "../../includes/libft.h"
 
 void	ft_putunsignednbr_fd(unsigned int n, int fd)

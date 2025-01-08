@@ -6,11 +6,10 @@
 /*   By: evdalmas <evdalmas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 14:45:01 by evdalmas          #+#    #+#             */
-/*   Updated: 2025/01/08 17:03:01 by evdalmas         ###   ########.fr       */
+/*   Updated: 2025/01/08 18:49:06 by evdalmas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/ft_printf.h"
 #include "../../includes/libft.h"
 
 int	ft_count_hex(unsigned long n)

@@ -1,39 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putptr.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: evdalmas <evdalmas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/16 14:49:16 by evdalmas          #+#    #+#             */
-/*   Updated: 2025/01/08 18:49:08 by evdalmas         ###   ########.fr       */
+/*   Created: 2025/01/08 18:12:40 by evdalmas          #+#    #+#             */
+/*   Updated: 2025/01/08 18:42:17 by evdalmas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "include/push_swap.h"
 
-int	ft_ptr_len(uintptr_t num)
+int main(int ac, char **av)
 {
-	int	len;
+    t_list *list;
 
-	if (num == 0)
-		return (3);
-	len = 0;
-	while (num != 0)
-	{
-		len++;
-		num = num / 16;
-	}
-	return (len);
-}
+    if (ac < 2)
+    {
+        printf("Usage: %s <numbers>\n", av[0]);
+        return (1);
+    }
 
-void	ft_putptr(void *ptr)
-{
-	if ((unsigned long)ptr == 0)
-	{
-		ft_putstr_fd("(nil)", 1);
-		return ;
-	}
-	ft_putstr_fd("0x", 1);
-	ft_puthex((unsigned long)ptr);
+    list = ft_parse(ac, av);
+    if (!list)
+    {
+        printf("Error: Invalid input\n");
+        return (1);
+    }
+
+    show_list(list);
+    return (0);
 }
