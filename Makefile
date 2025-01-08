@@ -13,7 +13,7 @@ YELLOW = \033[1;33m
 GREEN = \033[1;32m
 RESET = \033[0m
 
-all : parsing sorting stack_utils $(NAME)
+all : compiling $(NAME)
 
 $(NAME) : $(OBJ)
 			@echo "$(YELLOW)Compiling my beautiful libft...$(RESET)"
@@ -21,27 +21,11 @@ $(NAME) : $(OBJ)
 			@clang -o $(NAME) $(OBJ) $(CFLAGS) -I libft libft/libft.a
 			@echo "$(GREEN)Compilation finished.$(RESET)"
 
-# Custom rules to compile folders
-parsing: $(filter ./src/parsing/%.o, $(OBJ))
-			@echo "$(YELLOW)Compiling parsing...$(RESET)"
-			@echo "$(GREEN)parsing compiled successfully.$(RESET)"
+compiling: $(filter ./src/%.o, $(OBJ))
+			@echo "$(YELLOW)Compiling...$(RESET)"
+			@echo "$(GREEN)Compiling ended successfully.$(RESET)"
 
-sorting: $(filter ./src/sorting/%.o, $(OBJ))
-			@echo "$(YELLOW)Compiling sorting...$(RESET)"
-			@echo "$(GREEN)sorting compiled successfully.$(RESET)"
-
-stack_utils: $(filter ./src/stack_utils/%.o, $(OBJ))
-			@echo "$(YELLOW)Compiling stack_utils...$(RESET)"
-			@echo "$(GREEN)stack_utils compiled successfully.$(RESET)"
-
-# Per-file compilation rules
-./src/stack_utils/%.o: ./src/stack_utils/%.c
-			@clang $(CFLAGS) -c $< -o $@
-
-./src/parsing/%.o: ./src/parsing/%.c
-			@clang $(CFLAGS) -c $< -o $@
-
-./src/sorting/%.o: ./src/sorting/%.c
+./src/%.o: ./src/%.c
 			@clang $(CFLAGS) -c $< -o $@
 
 %.o: %.c

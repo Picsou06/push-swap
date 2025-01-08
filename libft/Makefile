@@ -6,7 +6,7 @@
 #    By: evdalmas <evdalmas@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/08 15:00:13 by evdalmas          #+#    #+#              #
-#    Updated: 2025/01/08 17:39:09 by evdalmas         ###   ########.fr        #
+#    Updated: 2025/01/08 18:56:48 by evdalmas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,6 @@ $(NAME):	$(OBJS)
 			@ranlib $(NAME)
 
 $(OBJS_DIR)%.o : $(SRCS_DIR)%.c | $(OBJSF)
-			@echo "$(YELLOW)Compiling: $< $(DEF_COLOR)"
 			@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 $(OBJSF):
