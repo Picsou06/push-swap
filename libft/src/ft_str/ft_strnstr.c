@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: evdalmas <evdalmas@student.42.fr>          +#+  +:+       +#+        */
+/*   By: picsou06 <picsou06@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 10:04:03 by evdalmas          #+#    #+#             */
-/*   Updated: 2025/01/08 17:21:24 by evdalmas         ###   ########.fr       */
+/*   Updated: 2025/01/09 20:24:32 by picsou06         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		if (*haystack == *needle)
 		{
 			answer = haystack;
-			if (is_match((char *)haystack, (char *)needle) && i + size - 1 < len)
+			if (is_match((char *)haystack, (char *)needle) \
+				&& i + size - 1 < len)
 			{
 				return ((char *)answer);
 			}

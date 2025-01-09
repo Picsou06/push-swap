@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: evdalmas <evdalmas@student.42.fr>          +#+  +:+       +#+        */
+/*   By: picsou06 <picsou06@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:21:17 by evdalmas          #+#    #+#             */
-/*   Updated: 2025/01/08 17:34:27 by evdalmas         ###   ########.fr       */
+/*   Updated: 2025/01/09 20:32:16 by picsou06         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_calloc(size_t elementCount, size_t elementSize)
 {
 	void	*ptr;
-	size_t		i;
+	size_t	i;
 
 	if (elementSize != 0 && elementCount > SIZE_MAX / elementSize)
 		return (NULL);
