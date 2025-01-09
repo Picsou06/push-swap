@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   sort_small.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: evdalmas <evdalmas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/09 15:11:33 by evdalmas          #+#    #+#             */
-/*   Updated: 2025/01/09 22:26:35 by evdalmas         ###   ########.fr       */
+/*   Created: 2025/01/09 22:16:57 by evdalmas          #+#    #+#             */
+/*   Updated: 2025/01/09 22:49:06 by evdalmas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "../../include/push_swap.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	sort_small_stack(t_list *a)
 {
-	write(fd, &c, 1);
+	sort_list(a);
+	if (a->nb_elem == 2)
+		sa(a);
+	else if (a->nb_elem == 3)
+		sort_three(a, 0, 1, 2);
+	else if (a->nb_elem == 4)
+		sort_four(a);
+	else if (a->nb_elem == 5)
+		sort_five(a);
 }

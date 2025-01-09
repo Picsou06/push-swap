@@ -5,3 +5,4 @@ libft/obj
 libft/libft.a
 *.o
 src/main.o
+push_swap_tester
