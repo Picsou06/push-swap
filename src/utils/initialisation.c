@@ -6,7 +6,7 @@
 /*   By: evdalmas <evdalmas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 22:17:05 by evdalmas          #+#    #+#             */
-/*   Updated: 2025/01/10 00:23:08 by evdalmas         ###   ########.fr       */
+/*   Updated: 2025/01/10 00:47:45 by evdalmas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ t_list	*init_list(int nbr)
 	element->next = NULL;
 	list->first = element;
 	list->nb_elem = 1;
-
 	return (list);
 }
 

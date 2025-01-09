@@ -6,7 +6,7 @@
 /*   By: evdalmas <evdalmas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 22:17:26 by evdalmas          #+#    #+#             */
-/*   Updated: 2025/01/10 00:30:35 by evdalmas         ###   ########.fr       */
+/*   Updated: 2025/01/10 00:42:36 by evdalmas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int	main(int ac, char **av)
 		return (1);
 	}
 	a = ft_parse(ac, av);
-	show_list(a);
 	if (!a)
 	{
 		ft_printf("Error: Invalid input\n");

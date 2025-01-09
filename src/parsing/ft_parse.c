@@ -6,7 +6,7 @@
 /*   By: evdalmas <evdalmas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 22:17:33 by evdalmas          #+#    #+#             */
-/*   Updated: 2025/01/10 00:32:35 by evdalmas         ###   ########.fr       */
+/*   Updated: 2025/01/10 00:47:24 by evdalmas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static int	chech_digit_overflow(int ac, char **av)
 	while (i < ac)
 	{
 		errno = 0;
-		nbr = strtol(av[i], &endptr, 10);
+		nbr = ft_strtol(av[i], &endptr, 10);
 		if (errno == ERANGE || nbr > INT_MAX || nbr < INT_MIN)
 		{
 			return (0);
@@ -85,7 +85,6 @@ t_list	*ft_parse(int ac, char **av)
 	t_list		*list;
 	int			i;
 
-	
 	if (!ft_isvalid(ac, av))
 		return (NULL);
 	i = ac - 1;

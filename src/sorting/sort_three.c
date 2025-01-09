@@ -6,7 +6,7 @@
 /*   By: evdalmas <evdalmas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 22:16:45 by evdalmas          #+#    #+#             */
-/*   Updated: 2025/01/09 22:38:28 by evdalmas         ###   ########.fr       */
+/*   Updated: 2025/01/10 00:50:36 by evdalmas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static void	top_is_median(t_list *a, int smallest)
 		rra(a);
 }
 
-void	top_is_smallest(t_list *a)
+static void	top_is_smallest(t_list *a)
 {
 	sa(a);
 	ra(a);

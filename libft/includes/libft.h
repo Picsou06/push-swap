@@ -6,7 +6,7 @@
 /*   By: evdalmas <evdalmas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 16:54:31 by evdalmas          #+#    #+#             */
-/*   Updated: 2025/01/09 22:25:53 by evdalmas         ###   ########.fr       */
+/*   Updated: 2025/01/10 00:47:03 by evdalmas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ void		ft_putstr_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
 long		ft_atol(const char *str);
 int			ft_error(void);
+long		ft_strtol(const char *nptr, char **endptr, int base);
 
 typedef struct s_Llist
 {

@@ -1,35 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strtol.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: evdalmas <evdalmas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 09:01:51 by evdalmas          #+#    #+#             */
-/*   Updated: 2025/01/10 00:34:58 by evdalmas         ###   ########.fr       */
+/*   Created: 2025/01/10 00:34:14 by evdalmas          #+#    #+#             */
+/*   Updated: 2025/01/10 00:46:39 by evdalmas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+static int	ft_isspace(int c)
 {
-	int		i;
-	char	*answer;
+	return (c == ' ' || (c >= '\t' && c <= '\r'));
+}
 
-	i = 0;
-	answer = 0;
-	while (s[i] != '\0')
+long	ft_strtol(const char *nptr, char **endptr, int base)
+{
+	long long	nbr;
+	int			sign;
+
+	nbr = 0;
+	sign = 1;
+	while (ft_isspace(*nptr))
+		nptr++;
+	if (*nptr == '-' || *nptr == '+')
 	{
-		if (s[i] == (char)c)
-		{
-			answer = (char *)&s[i];
-		}
-		i++;
+		if (*nptr == '-')
+			sign = -1;
+		nptr++;
 	}
-	if (s[i] == (char)c)
+	while (ft_isdigit(*nptr))
 	{
-		return ((char *)&s[i]);
+		nbr = nbr * base + (*nptr - '0');
+		nptr++;
 	}
-	return (answer);
+	if (endptr)
+		*endptr = (char *)nptr;
+	return (nbr * sign);
 }
